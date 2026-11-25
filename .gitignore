@@ -1,0 +1,57 @@
+# ==============================================================================
+# Xilinx Vivado Project & Build Artifacts
+# ==============================================================================
+*.xpr
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.srcs/
+*.gen/
+*.tmp/
+*.hbs/
+.Xil/
+
+# Vivado Logs, Journals & Binary Report Databases
+*.jou
+*.log
+*.str
+*.rpx
+*.wdb
+*.pb
+*.dcp
+*.bit
+*.bin
+*.ltx
+*.mmi
+*.xsa
+vivado*.backup.jou
+vivado*.backup.log
+webtalk*
+
+# ==============================================================================
+# Simulator & Waveform Dumps (Icarus Verilog / GTKWave / ModelSim)
+# ==============================================================================
+*.vcd
+*.fst
+*.lxt
+*.lxt2
+*.ghw
+*.vvp
+*.out
+work/
+transcript
+vsim.wlf
+
+# ==============================================================================
+# OS & Editor Clutter (Windows / macOS / VS Code)
+# ==============================================================================
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+.vscode/
+*.swp
+*.swo
+*~
