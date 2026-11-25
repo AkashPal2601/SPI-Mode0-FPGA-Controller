@@ -31,9 +31,9 @@ A full-duplex **SPI Mode 0 (`CPOL = 0`, `CPHA = 0`)** hardware controller implem
 ### Elaborated Schematics
 
 * **Top-Level Modular Elaborated Design Schematic:**
-  ![Top-Level Modular Elaborated Schematic](docs/schematics/[rtl_schematic_Topmost_SPI_Top_FPGA.png])
+  ![Top-Level Modular Elaborated Schematic](docs/schematics/rtl_schematic_Topmost_SPI_Top_FPGA.png)
 * **Master–Slave Integration Elaborated Design Schematic:**
-  ![Master-Slave Integration Elaborated Schematic](docs/schematics/[rtl_schematic_Top_Level_Master_Slave_Integration.png])
+  ![Master-Slave Integration Elaborated Schematic](docs/schematics/rtl_schematic_Top_Level_Master_Slave_Integration.png)
 
 ---
 
@@ -60,9 +60,12 @@ Rather than checking only a single 8-bit data transfer manually, each testbench 
 4. **Multi-Scenario Coverage:** Combines directed corner cases, pseudo-random vector streams, power-on initialization and `rst_n` / `start` stress testing.
 
 * **Testbench Console Output Screenshots:**
-  ![Testbench Scoreboard Summary Banner](docs/self_checking_tb_consoles/[testbench_scoreboard_summary_post_impl_timing.png])
-  ![Testbench Data Transfer Frame 1](docs/self_checking_tb_consoles/[testbench_data_transfer_frame_1.png])
-  ![Testbench Data Transfer Frame 1](docs/self_checking_tb_consoles/[testbench_data_transfer_frame_2.png])
+
+  ![Testbench Scoreboard Summary Banner](docs/self_checking_tb_consoles/testbench_scoreboard_summary_post_impl_timing.png)
+
+  ![Testbench Data Transfer Frame 1](docs/self_checking_tb_consoles/testbench_data_transfer_frame_1.png)
+
+  ![Testbench Data Transfer Frame 2](docs/self_checking_tb_consoles/testbench_data_transfer_frame_2.png)
 
 ## 5. Follow-Up Plans
 
