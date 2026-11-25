@@ -4,6 +4,8 @@ A full-duplex **SPI Mode 0 (`CPOL = 0`, `CPHA = 0`)** hardware controller implem
 
 ---
 
+![Full-Duplex Transfer of 8'h55 via SPI Mode 0 Protocol](docs/waveforms/sim_post_impl_timing_data_transfer_1.png)
+
 ## 1. Project Overview & Key Highlights
 
 * **SPI Mode 0 Protocol (`CPOL = 0`, `CPHA = 0`):** Serial clock `SCLK` idles low (`0`) when inactive (CPOL = 0). Data shifts on the falling edge of `SCLK` and is sampled on the rising edge of `SCLK` during active transfers (CPHA = 0).
@@ -24,14 +26,14 @@ A full-duplex **SPI Mode 0 (`CPOL = 0`, `CPHA = 0`)** hardware controller implem
 | `Debouncer` | Helper Module | Takes bouncy board pushbutton inputs and filters them to obtain a clean rectangular pulse |
 | `Seven_Seg_Controller` | Helper Module | Dictates the multiplexing logic for the display controls of the on-board segment displays |
 | `SPI_Top` | Subsystem | Integrates `SPI_Master` and `SPI_Slave` with top-level TX/RX data registers and control/status signals |
-| `SPI_Top_FPGA_Wrapper` | Top FPGA | Wraps `SPI_Top` with board-level I/O, pushbutton input debouncing (`Debounce_start`), and display/indicator logic mapped via `.xdc` constraints[span_4](start_span)[span_4](end_span) |
+| `SPI_Top_FPGA_Wrapper` | Top FPGA | Wraps `SPI_Top` with board-level I/O, pushbutton input debouncing (`Debounce_start`), and display/indicator logic mapped via `.xdc` constraints |
 
 ### Elaborated Schematics
 
 * **Top-Level Modular Elaborated Design Schematic:**
-  ![Top-Level Modular Elaborated Schematic](docs/Schematics/[rtl_schematic_Topmost_SPI_Top_FPGA.png])
+  ![Top-Level Modular Elaborated Schematic](docs/schematics/[rtl_schematic_Topmost_SPI_Top_FPGA.png])
 * **Master–Slave Integration Elaborated Design Schematic:**
-  ![Master-Slave Integration Elaborated Schematic](docs/Schematics/[rtl_schematic_Top_Level_Master_Slave_Integration.png])
+  ![Master-Slave Integration Elaborated Schematic](docs/schematics/[rtl_schematic_Top_Level_Master_Slave_Integration.png])
 
 ---
 
@@ -56,6 +58,11 @@ Rather than checking only a single 8-bit data transfer manually, each testbench 
 2. **Per-Test Console Feedback:** Each test case prints a `[PASS]` or `[FAIL]` status line as it runs.
 3. **Cumulative Tally & Scoreboard Summary Banner:** Pass and fail counters are accumulated across the full run and printed in a final summary banner.
 4. **Multi-Scenario Coverage:** Combines directed corner cases, pseudo-random vector streams, power-on initialization and `rst_n` / `start` stress testing.
+
+* **Testbench Console Output Screenshots:**
+  ![Testbench Scoreboard Summary Banner](docs/self_checking_tb_consoles/[testbench_scoreboard_summary_post_impl_timing.png])
+  ![Testbench Data Transfer Frame 1](docs/self_checking_tb_consoles/[testbench_data_transfer_frame_1.png])
+  ![Testbench Data Transfer Frame 1](docs/self_checking_tb_consoles/[testbench_data_transfer_frame_2.png])
 
 ## 5. Follow-Up Plans
 
